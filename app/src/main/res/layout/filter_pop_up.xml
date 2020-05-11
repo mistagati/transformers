@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/list_item_shape"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="20dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <com.surpassplus.transformers.customviews.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Refine your search"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/popupCloseView"
+                    android:src="@drawable/ic_close_imge" />
+            </RelativeLayout>
+            <com.surpassplus.transformers.customviews.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Filter Options"
+                android:textColor="#ff000000"
+                android:textSize="16sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/sorting_option_background"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="City"
+                    android:id="@+id/filterByCityButton"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textColorButton"
+                    android:textSize="16sp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/sorting_selected_button"
+                    android:text="All Locations"
+                    android:id="@+id/filterByAllLocationsButton"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textColor" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutCityOptions"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.surpassplus.transformers.customviews.CustomTextView
+                    android:id="@+id/kmTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Find in what city"
+                    android:textColor="#FF333333"
+                    android:textSize="16sp"
+                    />
+                <com.surpassplus.transformers.customviews.CustomEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:hint="City"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/ic_icon_location_map"
+                    android:id="@+id/cityEditText"
+                    android:background="@drawable/edit_text_back_ground"
+                    android:orientation="horizontal"
+                    />
+             </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/applyEditButton"
+                android:background="@drawable/sorting_selected_button"
+                android:text="APPLY"
+                android:textColor="#FFFFFFFF"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.surpassplus.transformers.activities.SplashActivity">
+    <LinearLayout
+        android:id="@+id/nameAndImageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#efefef"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/transformer" />
+        <com.surpassplus.transformers.customviews.CustomTextView
+            android:id="@+id/appNameTextView"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text="Transformers"
+            android:textSize="@dimen/splash_screen_app_name_text_size"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

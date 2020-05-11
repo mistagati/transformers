@@ -1,0 +1,518 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.surpassplus.transformers.fragments.TransformerDetailsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mParentContainerLayout"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:background="#efefef"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    >
+                    <ImageView
+                        android:tint="@color/colorPrimary"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/backArrow"
+                        android:src="@drawable/ic_arrow" />
+                    <com.surpassplus.transformers.customviews.CustomTextView
+                        android:id="@+id/modeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Edit"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:tint="@color/colorPrimary"
+                        android:clickable="true"
+                        android:id="@+id/saveImageView"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="22dp"
+                        android:layout_toLeftOf="@id/deleteImageView"
+                        android:src="@drawable/save" />
+
+                    <ImageView
+                        android:tint="@color/colorPrimary"
+                        android:clickable="true"
+                        android:id="@+id/deleteImageView"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_close" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="11dp"
+                            android:layout_marginStart="11dp"
+                            android:background="@drawable/list_item_shape"
+                            android:orientation="vertical">
+
+
+                            <!-- android:drawableLeft="@drawable/ic_icon_location_map"-->
+                            <com.surpassplus.transformers.customviews.CustomEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="16dp"
+                                android:hint="Transformer Name"
+                                android:padding="5dp"
+                                android:textSize="20sp"
+                                android:singleLine="true"
+                                android:drawablePadding="5dp"
+                                android:id="@+id/nameEditText"
+                                android:background="@drawable/edit_text_back_ground"
+                                android:orientation="horizontal"
+                                />
+
+
+                            <View
+                                android:layout_marginTop="14dp"
+                                android:layout_marginBottom="20dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@color/branchDetailsPageViewColor" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:background="@drawable/sorting_option_background"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@android:color/transparent"
+                                    android:text="Autobot"
+                                    android:id="@+id/autobotButton"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/textColorButton"
+                                    android:textSize="16sp" />
+                                <Button
+                                    android:textSize="16sp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/sorting_selected_button"
+                                    android:text="Decepticon"
+                                    android:id="@+id/decepticonButton"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/textColor" />
+                            </LinearLayout>
+
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@color/branchDetailsPageViewColor" />
+
+                            <!-- Strength -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/strengthLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Strength"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/strengthSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/strengthValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Intelligence -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/intelligenceLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Intelligence"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/intelligenceSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/intelligenceValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Speed -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/speedLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Speed"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/speedSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/speedValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Endurance -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/enduranceLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Endurance"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/enduranceSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/enduranceValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Rank -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/rankLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Rank"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/rankSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/rankValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Courage -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:id="@+id/courageLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="20dp"
+                                android:gravity="left"
+                                android:text="Courage"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/courageSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/courageValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Firepower -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/firepowerLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Firepower"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/firepowerSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/firepowerValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+                            <!-- Skill -->
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:layout_marginLeft="20dp"
+                                android:id="@+id/skillLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:gravity="left"
+                                android:text="Skill"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="18dp" />
+                            <LinearLayout
+                                android:layout_marginLeft="11dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <SeekBar
+                                    android:layout_weight="1"
+                                    android:id="@+id/skillSeekBar"
+                                    android:max="9"
+                                    android:progress="0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+                                <com.surpassplus.transformers.customviews.CustomTextView
+                                    android:id="@+id/skillValueTextView"
+                                    android:layout_marginTop="-4dp"
+                                    android:layout_width="32dp"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="18dp" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="30dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                />
+
+
+
+
+
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:visibility="gone"
+                                android:id="@+id/addressTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/darkGray"
+                                android:textSize="16dp" />
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:visibility="gone"
+                                android:id="@+id/phoneLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:gravity="center"
+                                android:text="Phone"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20dp" />
+                            <View
+                                android:visibility="gone"
+                                android:layout_marginTop="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@color/branchDetailsPageViewColor" />
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:visibility="gone"
+                                android:id="@+id/phoneTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/darkGray"
+                                android:textSize="16dp" />
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:visibility="gone"
+                                android:id="@+id/hoursLabel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:gravity="center"
+                                android:text="Hours"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="20dp" />
+                            <View
+                                android:visibility="gone"
+                                android:layout_marginTop="7dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:background="@color/branchDetailsPageViewColor" />
+                            <com.surpassplus.transformers.customviews.CustomTextView
+                                android:visibility="gone"
+                                android:id="@+id/hoursTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="7dp"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/darkGray"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/transformerDetailsProgressBar"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

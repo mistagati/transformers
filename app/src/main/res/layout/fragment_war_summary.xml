@@ -1,0 +1,245 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.surpassplus.transformers.fragments.TransformerListingFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--  android:background="@drawable/listing_drawable_gradient" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#efefef"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/backButton"
+                    android:src="@drawable/ic_arrow" />
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.surpassplus.transformers.customviews.CustomTextView
+                        android:id="@+id/titleHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLength="15"
+                        android:text="War Summary"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp" />
+                </LinearLayout>
+                <ImageView
+                    android:tint="@color/colorPrimary"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/editImageView"
+                    android:src="@drawable/fight" />
+            </RelativeLayout>
+            <com.surpassplus.transformers.customviews.CustomTextView
+                android:visibility="gone"
+                android:id="@+id/locationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_icon_location"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:maxLength="200"
+                android:text=""
+                android:textColor="@color/textColor"
+                android:textSize="18dp" />
+
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/stat_rank_rating"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Winner"
+                    android:textColor="#ffffff"
+                    >
+                </TextView>-->
+                <com.surpassplus.transformers.customviews.CustomTextView
+
+                    android:layout_marginRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Winner:"
+                    android:textColor="#efefef"
+                    android:layout_height="wrap_content" />
+
+                <com.surpassplus.transformers.customviews.CustomTextView
+                    android:id="@+id/winningTeam"
+                    android:layout_marginLeft="0dp"
+                    android:layout_width="wrap_content"
+                    android:textSize="20dp"
+                    android:text=""
+                    android:textColor="@color/statitemcolor"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stat_rank_rating"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Autobot Wins: "
+                        android:textColor="#ffffff"
+                        >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/aBattleWins"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/statitemcolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="3"
+                        >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/stat_rank_rating"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Decepticon Wins: "
+                        android:textColor="#ffffff"
+                        >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/dBattleWins"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/statitemcolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="3"
+                        >
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/sorting_option_background"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="Autobots"
+                    android:id="@+id/autobotButton"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textColorButton"
+                    android:textSize="16sp" />
+                <Button
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/sorting_selected_button"
+                    android:text="Decepticons"
+                    android:id="@+id/decepticonButton"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textColor" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="#efefef"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="160dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/jobListRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:outlineProvider="bounds"
+                    android:scrollbars="none" />
+                <ProgressBar
+                    android:layout_width="40dp"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/mJobListProgressBar"
+                    android:visibility="gone"
+                    android:layout_height="40dp" />
+                <com.surpassplus.transformers.customviews.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:text="Sorry! no branches found."
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/gradientStartColor"
+                    android:id="@+id/noBranchesTextView"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
